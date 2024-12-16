@@ -1,0 +1,5 @@
+module limbo [system] {
+    umbrella header "limbo.h"
+    link "limbo_sqlite3"
+    export *
+}
