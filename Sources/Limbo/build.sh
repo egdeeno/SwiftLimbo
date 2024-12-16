@@ -25,6 +25,6 @@ PATH=$PATH:$RUST_SRC_PATH
 rustup override set nightly
 rustup target add $2-$3
 
-cargo -Z unstable-options -C $1 build --release --target $2-$3
+cargo -Z unstable-options -C $1/limbo build --release --target $2-$3
 
-cp $1/target/$2-$3/release/*.a $1/
+cp $1/limbo/target/$2-$3/release/*.a $1/

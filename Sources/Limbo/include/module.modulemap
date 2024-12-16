@@ -1,4 +1,4 @@
-module limbo [system] {
+module Limbo [system] {
     umbrella header "limbo.h"
     link "limbo_sqlite3"
     export *

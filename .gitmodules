@@ -1,0 +1,3 @@
+[submodule "Sources/Limbo/limbo"]
+	path = Sources/Limbo/limbo
+	url = https://github.com/tursodatabase/limbo.git

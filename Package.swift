@@ -12,11 +12,11 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(name: "SwiftWrapper",
-            dependencies: ["limbo"]
+            dependencies: ["Limbo"]
         ),
-        .target(name: "limbo",
-            exclude: ["sqlite3/examples", "sqlite3/tests", "vendored"],
-            linkerSettings: [LinkerSetting.unsafeFlags(["-L./Sources/limbo/", "-lpthread", "-ldl", "-lm"])],
+        .target(name: "Limbo",
+            exclude: ["limbo/sqlite3/examples", "limbo/sqlite3/tests", "limbo/vendored", "limbo/target"],
+            linkerSettings: [LinkerSetting.unsafeFlags(["-L./Sources/Limbo/", "-lpthread", "-ldl", "-lm"])],
             plugins: [
                 .plugin(name: "LimboSourceGenPlugin")
             ]
